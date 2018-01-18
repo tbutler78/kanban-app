@@ -7,6 +7,12 @@ import Note from './Note';
  *  map returns a list of li elements for React to render.
  * key tells React which items have been changed/added/deleted
  */
-export default ({notes}) => (
-  <ul>{notes.map((note) => <li key={note.id}><Note task={note.task} /></li>)}</ul>
-)
+export default ({ notes, onDelete = () => {} }) => (
+  <ul>
+    {notes.map(({id, task}) => 
+      <li key={id}>
+        <Note onDelete={onDelete.bind(null, id)} task={task} />
+      </li>
+    )}
+  </ul>
+);
