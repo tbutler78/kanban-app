@@ -18,10 +18,12 @@ export default class NoteStore {
     }
 
     create(note){
-        console.log('create note', note);
+      this.setState({
+          notes: this.notes.concat(note)
+      });
     }
     update(updatedNote){
-        console.log('update note', note');
+        console.log('update note', updatedNote);
     }
     delete(id){
         console.log('delete note', id);
