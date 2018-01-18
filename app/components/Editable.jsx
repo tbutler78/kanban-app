@@ -6,7 +6,7 @@ export default ({editing, value, onEdit, className, ...props}) => {
         return <Edit value={value} onEdit={onEdit} {...props} />
     }
 
-    return <span className={classNames('value', className)} {...props}>{value}</span>;
+    return <span className={classnames('value', className)} {...props}>{value}</span>;
 }
 
 class Edit extends React.Component {
