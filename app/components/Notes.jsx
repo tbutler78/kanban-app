@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Note from './Note';
 
 /**
  * {}'s allow us to mix JavaScript syntax within JSX.
@@ -7,5 +8,5 @@ import React from 'react';
  * key tells React which items have been changed/added/deleted
  */
 export default ({notes}) => (
-  <ul>{notes.map((note) => <li key={note.id}>{note.task}</li>)}</ul>
+  <ul>{notes.map((note) => <li key={note.id}><Note task={note.task} /></li>)}</ul>
 )
