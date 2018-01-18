@@ -19,6 +19,5 @@ const notes = [
  * key tells React which items have been changed/added/deleted
  */
 export default () => (
-    debugger;
   <ul>{notes.map((note) => <li key={note.id}>{note.task}</li>)}</ul>
 )
