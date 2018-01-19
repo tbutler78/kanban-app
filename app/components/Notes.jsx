@@ -15,7 +15,7 @@ export default ({
   onDelete = () => {}
 }) => (
   <ul className="notes">
-    {notes.map(({ id, editing, task }) => (
+    {(notes || []).map(({ id, editing, task }) => (
       <li key={id}>
         <Note className="note" onClick={onNoteClick.bind(null, id)}>
           <Editable

@@ -1,15 +1,14 @@
 import NoteActions from '../actions/NoteActions';
 
-export default class NoteStore {
+class NoteStore {
     constructor() {
         this.bindActions(NoteActions);
-
     }
 
     create(note) {
         console.log('create note', note);
         this.setState({
-            notes: this.notes.concat(note)
+            notes: (this.notes || []).concat(note)
         });
     }
 
@@ -33,3 +32,5 @@ export default class NoteStore {
         });
     }
 }
+
+export default NoteStore;

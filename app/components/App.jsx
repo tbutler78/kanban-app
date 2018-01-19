@@ -3,8 +3,7 @@ import React from 'react';
 import uuid from 'uuid';
 import connect from '../libs/connect';
 
-import Notes from './Notes';
-import NoteActions from '../actions/NoteActions';
+
 import Lanes from './Lanes'
 import LaneActions from '../actions/LaneActions';
 
